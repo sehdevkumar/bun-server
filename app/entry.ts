@@ -1,3 +1,4 @@
+import { db } from "./server-connection/connection";
 
 const bunEntry = ()=> {
     const bun = Bun.serve({
@@ -8,6 +9,7 @@ const bunEntry = ()=> {
         return new Response("404!");
       },
     });
+
     console.log("Server is running 👉 on Port", bun.port);     
 }    
 
